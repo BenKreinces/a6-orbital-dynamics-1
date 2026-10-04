@@ -1,6 +1,7 @@
 import numpy as np
 G = 1
 M=1
+m=1
 def mag(state: tuple[float, float, float, float, float, float]):
     return np.sqrt(state[0]**2 + state[1]**2)
 
@@ -21,3 +22,13 @@ def Verlet(state, tf, ti, nSteps):
         state = (rNextX, rNextY,vNextX, vNextY,aNext[4], aNext[5])
         states.append(state)
     return states
+
+
+def energy(state):
+    v = np.sqrt(state[2]**2 + state[3]**2)
+    r = mag(state)
+    K = 0.5 * m * v**2
+    U = -(G * M * m) / r
+    E = K + U
+    return K, U, E
+
