@@ -32,3 +32,12 @@ def energy(state):
     E = K + U
     return K, U, E
 
+
+def radius(state):
+    return mag(state)
+
+
+def speed(state):
+    return np.sqrt(state[2]**2 + state[3]**2)
+
+

@@ -5,7 +5,7 @@ state = (1, 0, 0, 1, 0, 0)
 ti = 0
 Tc = 2 * np.pi
 tf = np.pi * 2 * 11
-nSteps = 1000
+nSteps = 10000
 state = simulation.gravAccel(state)
 states = simulation.Verlet(state, tf, ti, nSteps)
 
