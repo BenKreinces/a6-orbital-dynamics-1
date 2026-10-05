@@ -57,10 +57,10 @@ for j, states in enumerate(allStates):
     plt.plot(t, E, label="E")
     plt.xlabel("Time")
     plt.ylabel("Energy")
-    plt.title(f'vy = {vys[i]}')
+    plt.title(f'vy = {vys[j]}')
     plt.legend()
     plt.show()
 
-    print(f'vy = {vys[i]}, initial total energy =, {E[0]}')
+    print(f'vy = {vys[j]}, initial total energy =, {E[0]}')
 
 print(f"Escape velocity: {np.sqrt(2)}")
