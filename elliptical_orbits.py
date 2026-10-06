@@ -39,6 +39,7 @@ for j, velocity in enumerate(velocities):
         U.append(energies[1])
         E.append(energies[2])
 
+
     axes[j].plot(x, y, label="Orbit")
     axes[j].plot(0, 0, "o", label="Central mass")
     axes[j].plot(x[0], y[0], "o", label="Initial point")
@@ -48,6 +49,7 @@ for j, velocity in enumerate(velocities):
     axes[j].set_title(f"v0 = {velocity}")
     axes[j].legend()
 
+    plt.figure()
     plt.plot(t, K, label="K")
     plt.plot(t, U, label="U")
     plt.plot(t, E, label="E")
@@ -55,19 +57,18 @@ for j, velocity in enumerate(velocities):
     plt.ylabel("Energy")
     plt.title(f"v0 = {velocity}")
     plt.legend()
-    plt.show()
 
+    plt.figure()
     plt.plot(t, r)
     plt.xlabel("Time")
     plt.ylabel("r")
     plt.title(f"v0 = {velocity}")
-    plt.show()
 
+    plt.figure()
     plt.plot(r, v)
     plt.xlabel("r")
     plt.ylabel("Speed")
     plt.title(f"v0 = {velocity}")
-    plt.show()
 
     apoTimes = []
     if velocity < 1:
@@ -90,4 +91,5 @@ for j, velocity in enumerate(velocities):
     print(f"Periapsis:{min(r)}")
     print(f"Apoapsis: {max(r)}")
 
+fig.tight_layout()
 plt.show()
