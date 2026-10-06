@@ -4,7 +4,7 @@ import numpy as np
 
 velocities = [0.8, 1.2]
 
-fig, axes = plt.subplots(1, 2)
+fig, axes = plt.subplots(1, 2, figsize = (10, 5))
 
 for j, velocity in enumerate(velocities):
     a = 1 / (2 - velocity**2)
